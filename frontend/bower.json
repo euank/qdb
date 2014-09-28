@@ -1,5 +1,5 @@
 {
-  "name": "couch-qdb",
+  "name": "qdb",
   "version": "0.0.0",
   "authors": [
     "ichivack <ichivack@gmail.com>"
@@ -15,6 +15,13 @@
   ],
   "dependencies": {
     "angular": "~1.2.23",
-    "CornerCouch": "*"
+    "uri.js": "~1.14.0",
+    "angular-flash-pure": "~0.1.0",
+    "angular-resource": "~1.2.25",
+    "angular-route": "~1.2.25",
+    "angular-sanitize": "~1.2.25",
+    "pure": "~0.5.0",
+    "pure-extras": "*",
+    "widearea": "~0.3.0"
   }
 }
