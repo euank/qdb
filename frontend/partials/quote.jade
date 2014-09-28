@@ -1,0 +1,18 @@
+h2
+  | Quote \#{{quote.id}}
+
+div.quoteboxwrapper
+  div.quotebox(id="quote_id_{{quote.id}}")
+    small
+      a.quote_id(href="#/quote/{{quote.id}}") {{quote.id}}
+      |  - {{quote.date | date:'short'}}
+    p.quote {{ quote.quote }}
+br
+div(ng-show="quote.source")
+  span.quote_source_label Source:
+  br
+
+  span.quote_source(ng-hide="isLink",ng-bind-html="quote.source | linky")
+  span.quote_source(ng-show="isLink")
+    a(href="{{quote.source}}") {{quote.source}}
+

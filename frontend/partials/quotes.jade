@@ -1,0 +1,13 @@
+include navigation
+
+h2#quotes_header Quote Listings
++navigation(false)
+br
+.quotes(ng-repeat="quote in quotes")
+  .quoteboxwrapper
+    div.quotebox(id="quote_id_{{quote.id}}")
+      small
+        a.quote_id(href="#/quote/{{quote.id}}") {{quote.id}}
+        |  - {{quote.date | date:'short'}}
+      p.quote {{ quote.quote }}
++navigation(true)

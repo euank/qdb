@@ -1,0 +1,19 @@
+{
+  "name": "qdb-frontend",
+  "version": "1.0.0",
+  "description": "QuoteDB frontend",
+  "main": "while true; do sleep 1; done",
+  "dependencies": {
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.4.1",
+    "gulp-ignore": "^1.2.0",
+    "jade": "^1.5.0",
+    "gulp-jade": "^0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

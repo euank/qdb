@@ -1,0 +1,13 @@
+h2 New Quote
+small Please only click submit once and please don't be a fag
+br
+#newquote-container-container
+  #newquote-container
+    ng-form
+      fieldset.full
+        legend Submit a new quote
+        textarea#newquote.full95(ng-disabled="queryActive",ng-model="quote",placeholder="Enter quote...")
+        br
+        button.fill5.pure-button.pure-button-primary(ng-click="addQuote()",ng-disabled="quote.length == 0 || queryActive") Submit Quote
+        label(for="sauce") Optional Source (url, irc channel, etc):
+        input(type="text",ng-model="source")

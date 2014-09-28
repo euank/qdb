@@ -1,0 +1,70 @@
+.quote {
+  font-family: monospace;
+  white-space: pre;
+}
+
+html, #layout, #menuouter, #container, #cont-view {
+  height: 100%;
+}
+
+#newquote {
+  bottom: 1000px;
+}
+
+
+body {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 90px;
+
+}
+
+.quotebox {
+  display: table;
+  background-color: #eee;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.quoteboxwrapper {
+  padding-bottom: 8px;
+}
+
+#cont-view {
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#newquote-container-container {
+  width: 90%;
+  height: 90%;
+  display: table;
+}
+
+#newquote-container {
+  display: table-row;
+  height: 90%;
+}
+
+.full95 {
+  width: 100%;
+  height: 95%;
+}
+
+.full5 {
+  width: 100%;
+  height: 5%;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+#menuouterinner {
+  width: 18%;
+  position: fixed;
+}

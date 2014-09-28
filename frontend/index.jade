@@ -1,0 +1,28 @@
+doctype html
+html(ng-app="Qdb")
+  head
+    title QuoteDB
+    link(href="bower_components/pure/pure-min.css" rel="stylesheet")
+    link(href="bower_components/pure-extras/css/pure-extras.css" rel="stylesheet")
+    link(href="css/app.css" rel="stylesheet")
+  body
+    #layout.pure-g
+      #menuouter.pure-u-1-5
+        h2 QuoteDB
+        div#menuouterinner
+          #menu.pure-menu-open.pure-menu
+            a.pure-menu-heading(href="#/") QuoteDB
+            ul
+              //li: a(href="#/random") Random // TODO
+              li: a(href="#/search") Search
+              li: a(href="#/new") New
+      #container.pure-u-4-5
+        flash-messages
+        #cont-view(ng-view)
+    script(src="bower_components/angular/angular.min.js")
+    script(src="bower_components/angular-flash-pure/dist/angular-flash-pure.js")
+    script(src="bower_components/angular-route/angular-route.min.js")
+    script(src="bower_components/angular-resource/angular-resource.min.js")
+    script(src="bower_components/angular-sanitize/angular-sanitize.min.js")
+    script(src="bower_components/uri.js/src/URI.js")
+    script(src="js/app.js")

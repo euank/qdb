@@ -1,0 +1,8 @@
+h3
+  | Search for a quote
+ng-form
+  fieldset.full
+    legend Enter a searchterm: it may be a regex
+    label(for="search") Search
+    input#search(type="text",ng-model="term")
+    button.pure-button.pure-button-primary(ng-click="Search()") Search
