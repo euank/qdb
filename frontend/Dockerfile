@@ -1,9 +1,10 @@
 FROM node:0.10-onbuild
-RUN npm install -g gulp
-RUN gulp
 
 RUN npm install -g bower
-RUN bower install
+RUN bower install --allow-root
+
+RUN npm install -g gulp
+RUN gulp
 
 VOLUME ["/usr/src/app/dist"]
 
