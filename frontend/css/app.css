@@ -1,6 +1,6 @@
 .quote {
   font-family: monospace;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 html, #layout, #menuouter, #container, #cont-view {
