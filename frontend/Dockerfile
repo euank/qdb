@@ -1,13 +1,13 @@
-FROM node:0.10-onbuild
+FROM node:4
+
+COPY . /usr/src/app/
+WORKDIR /usr/src/app
 
 RUN npm install -g bower
 RUN bower install --allow-root
 
 RUN npm install -g gulp
+RUN npm install
 RUN gulp
 
 VOLUME ["/usr/src/app/dist"]
-
-ENTRYPOINT /bin/bash
-# Sleep forever for fig
-CMD while true; do sleep 1; done

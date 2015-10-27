@@ -5,8 +5,18 @@ require 'time'
 
 module Qdb
   address = ENV['DB_1_PORT_5432_TCP_ADDR'] || 'localhost'
-  sleep 1 # time for db to come up
-  DB = Sequel.connect(adapter: :postgres, host: address, database: "qdb", user: "postgres", password: '')
+  for i in 1..12
+    begin
+      DB = Sequel.connect(adapter: :postgres, host: address, database: "qdb", user: "postgres", password: '')
+      break
+    rescue
+      if i < 10
+        sleep 1
+        retry
+      end
+      raise
+    end
+  end
   class Quote < Sequel::Model(DB[:quotes]); end
   class API < Grape::API
     format :json
