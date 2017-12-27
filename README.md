@@ -4,6 +4,14 @@
 
 This is a simple quote database. I'm not completely sure why it exists.
 
+## Development
+
+A dev server can be run with:
+
+```
+$ docker-compose up
+```
+
 ## Importing quotes
 
 If you have existing quotes, stick em in `./db_migrations/quotes.json` before
