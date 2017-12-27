@@ -4,10 +4,10 @@ require 'grape'
 require 'time'
 
 module Qdb
-  address = ENV['DB_1_PORT_5432_TCP_ADDR'] || 'localhost'
+  address = ENV['DATABASE_URL'] || raise('DATABASE_URL must be set')
   for i in 1..12
     begin
-      DB = Sequel.connect(adapter: :postgres, host: address, database: "qdb", user: "postgres", password: '')
+      DB = Sequel.connect(address)
       break
     rescue
       if i < 10
