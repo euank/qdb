@@ -14,3 +14,6 @@ FROM nginx
 RUN rm -rf /etc/nginx/conf.d/*
 COPY ./nginx.conf /etc/nginx/conf.d/qdb.conf
 COPY --from=builder /usr/src/app/dist/ /usr/src/app/dist/
+COPY ./entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
